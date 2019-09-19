@@ -1,0 +1,9 @@
+c=NaN;
+b=10;
+d=3.3333;
+e=(d).toFixed();
+f=(d).toFixed()-0;
+console.log(b!=c);
+console.log(typeof(d));
+console.log(typeof(e));
+console.log(typeof(f));
