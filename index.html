@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* Это каскадная таблица стилей: с ее помощью определяется внешний вид документа */
+    .result {
+        font-weight: bold;
+    }
+
+    /*стиль отображения элементов с class="result"*/
+    #payment {
+        text-decoration: underline;
+    }
+
+    /* для элемента с id="payment" */
+</style>
+
+<body>
+<script src="index.js"></script>
+    <form name="loandata">
+        <table>
+            <tr>
+                <td><b>Введите данные о ссуде:</b></td>
+            </tr>
+            <tr>
+                <td>1) Размер ссуды (в любой валюте):</td>
+                <td><input type="text" name="principal" onchange="calculate();"></td>
+            </tr>
+            <tr>
+                <td>2) Годовой процент:</td>
+                <td><input type="text" name="interest" onchange="calculate( );"></td>
+            </tr>
+            <tr>
+                <td>3) Срок ссуды в годах:</td>
+                <td><input type="text" name="years" onchange="calculate( );"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="button" value="Рассчитать" onclick="calculate( );"></td>
+            </tr>
+            <tr>
+                <td><b>Сведения о платежах:</b></td>
+            </tr>
+            <tr>
+                <td>4) Ежемесячный платеж:</td>
+                <td>$<span class="result" id="payment"></span></td>
+            </tr>
+            <tr>
+                <td>5) Общая сумма платежей:</td>
+                <td>$<span class="result" id="total"></span></td>
+            </tr>
+            <tr>
+                <td>6) Общая сумма платежей по процентам:</td>
+                <td>$<span class="result" id="totalinterest"></span></td>
+            </tr>
+        </table>
+    </form>
+    <input type="button" value="фибоначи" onclick="fibo();">
+</body>
+
+</html>
