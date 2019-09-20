@@ -77,7 +77,7 @@ let appData = {
           );
     }
 };
-for (  prop in appData)
+for ( let prop in appData)
 {
     console.log(`Наша программа включает в себя данные: ${prop}`);
 }
