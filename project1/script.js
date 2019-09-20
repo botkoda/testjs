@@ -64,8 +64,20 @@ let appData = {
     },
     chooseIncome:function(){
         let items=prompt('Что принесет доп. доход?(перечислить через запятую)','');
+        while (items == "" || items == null) {
+         items=prompt('Что принесет доп. доход?(перечислить через запятую)','');
+        }
         appData.income=items.split(', ');
+        appData.income.push(prompt('Может что-то еще?'));
+        appData.income.sort();
+        appData.income.forEach( 
+            function(item,index){
+                alert(`Спосбо доп. заробока ${index+1} :` + item );
+            }
+          );
     }
 };
-
-console.log(appData);
+for (  prop in appData)
+{
+    console.log(`Наша программа включает в себя данные: ${prop}`);
+}
